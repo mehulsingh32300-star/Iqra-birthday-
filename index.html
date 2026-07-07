@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Iqra ❤️</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ff5ea8,#9b59ff);
+overflow:hidden;
+color:white;
+text-align:center;
+}
+
+#intro{
+position:fixed;
+width:100%;
+height:100%;
+background:#111;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:35px;
+z-index:999;
+animation:hide 3s forwards;
+}
+
+@keyframes hide{
+80%{opacity:1;}
+100%{opacity:0;visibility:hidden;}
+}
+
+.container{
+padding:30px;
+}
+
+h1{
+font-size:42px;
+margin-top:20px;
+}
+
+img{
+width:280px;
+height:350px;
+border-radius:20px;
+object-fit:cover;
+box-shadow:0 0 25px white;
+}
+
+#slideshow{
+margin:25px auto;
+}
+
+.message{
+max-width:800px;
+margin:auto;
+font-size:20px;
+line-height:1.8;
+padding:20px;
+background:rgba(255,255,255,.15);
+border-radius:20px;
+}
+
+.balloon{
+position:absolute;
+bottom:-100px;
+font-size:45px;
+animation:fly linear infinite;
+}
+
+@keyframes fly{
+100%{
+transform:translateY(-120vh);
+}
+}
+
+button{
+margin-top:25px;
+padding:15px 35px;
+font-size:20px;
+border:none;
+border-radius:30px;
+background:#fff;
+color:#ff1493;
+cursor:pointer;
+}
+
+footer{
+margin:30px;
+font-size:18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="intro">
+🎁 A Special Surprise For Iqra (Sony) ❤️
+</div>
+
+<audio autoplay loop controls>
+<source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<h1>🎂 Happy Birthday Iqra (Sony) 🎉</h1>
+
+<div id="slideshow">
+<img id="photo" src="photo1.jpg">
+</div>
+
+<div class="message">
+
+Happy Birthday, Iqra! 🎉🎂<br><br>
+
+Allah tumhari zindagi ko hamesha khushiyon,
+sehat, kamyabi aur sukoon se bhar de.
+
+Har naya din tumhare liye ek nayi khushi aur ek nayi umeed lekar aaye.
+
+<br><br>
+
+Meri dua hai ki tum hamesha muskurati raho,
+apne har sapne ko poora karo,
+aur zindagi tumhe woh sab de jo tum dil se chahti ho.
+
+Tumhari dosti mere liye bahut special hai,
+aur main dil se shukrguzaar hoon ki tum meri zindagi ka hissa ho.
+
+<br><br>
+
+Aaj ka din sirf tumhare naam hai.
+
+Khoob enjoy karo,
+hamesha khush raho,
+aur yun hi apni pyari si smile se sabka dil jeetti raho.
+
+<br><br>
+
+❤️ Once Again Happy Birthday Iqra ❤️
+
+</div>
+
+<button onclick="confetti()">
+🎁 Open Your Gift
+</button>
+
+<footer>
+
+Made with ❤️ by Mehul
+
+</footer>
+
+</div>
+
+<script>
+
+let pics=["photo1.jpg","photo2.jpg"];
+
+let i=0;
+
+setInterval(()=>{
+i=(i+1)%pics.length;
+document.getElementById("photo").src=pics[i];
+},2500);
+
+for(let j=0;j<35;j++){
+
+let b=document.createElement("div");
+
+b.className="balloon";
+
+b.innerHTML=["🎈","💖","✨","🎉"][Math.floor(Math.random()*4)];
+
+b.style.left=Math.random()*100+"vw";
+
+b.style.animationDuration=(5+Math.random()*6)+"s";
+
+document.body.appendChild(b);
+
+}
+
+function confetti(){
+
+alert("🎉 Happiest Birthday Iqra ❤️");
+
+}
+
+</script>
+
+</body>
+</html>
